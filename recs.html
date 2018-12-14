@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Recommedations</title>
+	<link rel="stylesheet" type="text/css" href="style/style.css" />
+
+	<script type="text/javascript"
+	    src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+    
+	<script type="text/javascript">
+        function initViz() {
+            var containerDiv = document.getElementById("laborforcediv"),
+                url = "https://public.tableau.com/views/lfprates/lfp?:embed=y&:display_count=yes&publish=yes",
+                options = {
+                    hideTabs: true,
+                    onFirstInteractive: function () {
+                        console.log("Run this code when the viz has finished loading.");
+                    }
+                };
+
+            var viz = new tableau.Viz(containerDiv, url, options);
+        }
+    </script>
+</head>
+		
+<body onLoad="initViz();">
+	<div id="main">
+		<div id="header">
+				<div id="header_text">
+					<h1>
+						<a href="landing.html">
+							U.S. Labor Force Participation
+						</a>
+					</h1>
+					<h2>Labor Force Participation (LFP) as a Valuable Economic Indicator</h2>
+				</div>
+			<div id="menubar">
+				<ul id="menu">
+					<li class="selected"><a href="landing.html">What is LFP?</a></li>
+					<li><a href="impacts.html">Economic Impacts</a></li>
+					<li><a href="trends.html">LFP Trends</a></li>
+					<li><a href="recs.html">Recommendations</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div id="site_content">
+			<div id="content">
+								
+			<div id="laborforcediv" 
+				style="height: 500px; width:850px;"></div>
+				
+				
+				<h1>Policy and Macro Level Recommendations</h1>
+					<p>Fundamental change in the U.S. workforce will only be successful with federal policies that encourage workers to participate in the workforce and also encourage firms to offer incentives to keep workers. The U.S. is far behind all OECD countries in family friendly policies, incluidng parental leave when there is a birth to a mother or father. The U.S. offers $0 in parental leave benefits and requires companies to pay nothing to workers when out on leave. Other policies work examining include the education system on a national level, which could assist parents, specifically mothers in remaining in the workforce, if early-childhood offerings are available.</p>
+				
+				<h1>Firm Level Recommendations</h1>
+					<p>Firms have the first touch on workforce participants that are employed and have significant impact on a worker remaining in the workforce. A study by the Kaiser Family foundation indicates that once a female worker leaves the workforce, that female is 60% less likely to return to the workforce. To maintain workers, firms implement policies that encourage family friendly work environments, including flexibilities like telework, flexible hours, and adequete paid time off offerings.</p>
+				
+			</div>
+		</div>
+		
+		<div id="content_footer">
+			<div id="footer">
+				GWU Data Visualization
+				| <a href="#">HTML5</a>
+				| <a href="#">CSS</a>
+				| <a href="#">JavaScript</a>
+				| <a href="#">Developed by Teryn Zmuda</a>
+				
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

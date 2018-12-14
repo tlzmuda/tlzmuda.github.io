@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Economic Impacts of LFP</title>
+	<link rel="stylesheet" type="text/css" href="style/style.css"/>
+	
+	<script type="text/javascript"
+	    src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+    
+	<script type="text/javascript">
+        function initViz() {
+            var containerDiv = document.getElementById("LFPdiv"),
+                url = "https://public.tableau.com/views/LFP/LFPopp?:embed=y&:display_count=yes&publish=yes",
+                options = {
+                    hideTabs: true,
+                    onFirstInteractive: function () {
+                        console.log("Run this code when the viz has finished loading.");
+                    }
+                };
+
+            var viz = new tableau.Viz(containerDiv, url, options);
+        }
+    </script>
+</head>
+
+<body onLoad="initViz();">
+	<div id="main">
+		<div id="header">
+				<div id="header_text">
+					<h1>
+						<a href="landing.html">
+							U.S. Labor Force Participation
+						</a>
+					</h1>
+					<h2>Labor Force Participation as a Valuable Economic Indicator</h2>
+				</div>
+			<div id="menubar">
+				<ul id="menu">
+					<li class="selected"><a href="landing.html">What is LFP?</a></li>
+					<li><a href="impacts.html">Economic Impacts</a></li>
+					<li><a href="trends.html">LFP Trends</a></li>
+					<li><a href="recs.html">Recommendations</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div id="site_content">
+			<div id="content">
+				<h1>Economic Impacts of Female Participation</h1>
+				<p>Labor force participation rates among women, in the prime-working age of 25-54, have decreased since the millennium. During the 1950’s, 1960’s, 1970’s, and 1980’s, female labor force participation increased steadily and significantly, as the work place shifted to allow female workers. However, since 1999, when participation hit a peak at 76.8%, the rate has not returned to that level. The decrease is contrary to the overall increase in U.S. population and the increase of women in the U.S. The visualization below demonstrates what the U.S. has forgone in economic growth as a result of low rates of labor force participation among females.</p>
+				<div id="LFPdiv" 
+					 style="height: 700px; width:900px;"></div>
+					
+				<p>The data is collected from the Bureau of Labor Statistics (BLS) and is aggregated monthly data obtained from the Current Population Survey (CPS) which is a monthly survey that measures the extent of unemployment in the country. The CPS has been conducted in the United States every month since 1940, and excludes those in institutions and those on active duty.
+ </p>
+			</div><!-- content -->
+		</div><!-- site_content -->
+		
+		<div id="content_footer">
+			<div id="footer">
+				GWU Data Visualization
+				| <a href="#">HTML5</a>
+				| <a href="#">CSS</a>
+				| <a href="#">JavaScript</a>
+				| <a href="#">Developed by Teryn Zmuda</a>
+				
+			</div><!-- footer -->
+		</div><!-- content_footer -->
+	</div><!-- main -->
+
+</body>
+</html>

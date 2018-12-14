@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Labor Force Participation and the Economy</title>
+	<link rel="stylesheet" type="text/css" href="style/style.css"/>
+		
+	<script type="text/javascript"
+	    src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+    
+	<script type="text/javascript">
+        function initViz() {
+            var containerDiv = document.getElementById("unemploymentdiv"),
+                url = "https://public.tableau.com/views/rates_5/unemp1?:embed=y&:display_count=yes&publish=yes",
+                options = {
+                    hideTabs: true,
+                    onFirstInteractive: function () {
+                        console.log("Run this code when the viz has finished loading.");
+                    }
+                };
+
+            var viz = new tableau.Viz(containerDiv, url, options);
+        }
+    </script>
+</head>
+
+
+<body onLoad="initViz();">
+	<div id="main">
+		<div id="header">
+				<div id="header_text">
+					<h1>
+						<a href="landing.html">
+							U.S. Labor Force Participation
+						</a>
+					</h1>
+					<h2>Labor Force Participation (LFP) as a Valuable Economic Indicator</h2>
+				</div>
+			<div id="menubar">
+				<ul id="menu">
+					<li class="selected"><a href="landing.html">What is LFP?</a></li>
+					<li><a href="impacts.html">Economic Impacts</a></li>
+					<li><a href="trends.html">LFP Trends</a></li>
+					<li><a href="recs.html">Recommendations</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div id="site_content">			
+			<div id="content">
+				<h1>Labor Force Participation Rate vs. Unemployment Rate</h1>
+				<p>
+				 The unemployment rate is often cited as a prominent indicator of U.S. economic performance, but the metric excludes a key consideration—those that are not actively seeking employment. Why is it important to consider those not currently looking for a job? Simply put, those individuals not looking to work are missed opportunities for the U.S. work force, productivity, and economic growth—and reasons for non-participation include factors like discouragement after not finding work after a period of time, poor health, and unavailable work environments that allow a balance of family life. The latter reason has a particular impact on women in U.S. society.
+				</p>
+				
+				<div id="ratediv">
+					 <img src="unemployment.jpg" style='height: 100%; width: 100%; object-fit: contain'/></div>
+				
+				<div id="unemploymentdiv" 
+					 style="height: 700px; width:850px;"></div>
+				
+				<h1>Data</h1>
+				<p>Data was sourced from the Bureau of Labor Statistics aggregated statistics from the Consumer Population Survey. This data was analyzed in R Studio to produce relationship analysis, using regression models and statistical evaluation.  </p>
+				
+				
+				<h1>Website Images </h1>
+			
+				<ul>
+					<li>Background Photo referenced from <a href="http://www.unsplash.com">Unsplash</a></li>
+					<li>Header image "Black Line" sourced from GWU Data Visualization course materials</li>
+					<li>Content image "Grey Line" sourced from GWU Data Visualization course materials (opaque value altered).
+					<li>All additional images are original and produced through tools including R Studio, using ggplot2 package, Microsoft Power Point, and Tableau.</li></li>
+				</ul>
+			</div>
+		</div>
+		
+		
+		<div id="content_footer">
+			<div id="footer">
+				GWU Data Visualization
+				| <a href="#">HTML5</a>
+				| <a href="#">CSS</a>
+				| <a href="#">JavaScript</a>
+				| <a href="#">Developed by Teryn Zmuda</a>
+				
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
